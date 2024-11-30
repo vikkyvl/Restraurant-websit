@@ -1,0 +1,43 @@
+<div class="top-up hidden" id="feedbackForm">
+    <div class="background">
+        <button class="close-btn">×</button>
+    </div>
+    <div class="col-info" id="reviews-list"></div>
+    <script src="/src/js/feedback.js" type="module"></script>
+    <div class="col-rating">
+        <h2>Please Rate Us!</h2>
+        <div class="ratings-container">
+            <div class="rating">
+                <label for="dishes">Dishes</label>
+                <div class="stars">
+                    <input type="radio" id="dish1" name="dishes" value="5"><label for="dish1">&#9733;</label>
+                    <input type="radio" id="dish2" name="dishes" value="4"><label for="dish2">&#9733;</label>
+                    <input type="radio" id="dish3" name="dishes" value="3"><label for="dish3">&#9733;</label>
+                    <input type="radio" id="dish4" name="dishes" value="2"><label for="dish4">&#9733;</label>
+                    <input type="radio" id="dish5" name="dishes" value="1"><label for="dish5">&#9733;</label>
+                </div>
+            </div>
+            <div class="rating">
+                <label for="service">Service</label>
+                <div class="stars">
+                    <input type="radio" id="service1" name="service" value="5"><label for="service1">&#9733;</label>
+                    <input type="radio" id="service2" name="service" value="4"><label for="service2">&#9733;</label>
+                    <input type="radio" id="service3" name="service" value="3"><label for="service3">&#9733;</label>
+                    <input type="radio" id="service4" name="service" value="2"><label for="service4">&#9733;</label>
+                    <input type="radio" id="service5" name="service" value="1"><label for="service5">&#9733;</label>
+                </div>
+            </div>            
+        </div>
+        <p>Click on the star</p>
+        <div class="comment-box">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Name">
+            <label for="comment">Comment</label>
+            <textarea id="comment" maxlength="500" rows="4" placeholder="Comment"></textarea>
+            <button id="submit-feedback" type="button">LEAVE A FEEDBACK</button>
+        </div>
+    </div>    
+    <script src="/src/js/feedback.js" type="module"></script>
+</div>
+<div id="overlay" class="overlay" style="display: none;"></div>
+<div id="feedback-message" class="feedback-message" style="display: none;"></div>

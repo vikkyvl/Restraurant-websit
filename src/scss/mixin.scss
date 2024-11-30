@@ -1,0 +1,21 @@
+@mixin with-line {
+    position: relative;
+
+    @media (min-width: 769px) {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 2px;
+            background-color: $warm-medium-brown;
+            transform: translateX(10px);
+        }
+
+        &:last-child::after {
+            display: none;
+        }
+    }
+}
+

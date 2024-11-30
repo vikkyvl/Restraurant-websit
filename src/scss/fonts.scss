@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@600&family=MonteCarlo&family=Urbanist:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=MonteCarlo&family=Urbanist:wght@700&display=swap');
+
+@mixin font($name, $weight, $isCursive: false, $variation-settings: null) {
+  font-family: $name, if($isCursive, cursive, sans-serif); 
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+
+  @if $variation-settings {
+      font-variation-settings: $variation-settings;
+  }
+}

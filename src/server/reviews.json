@@ -1,0 +1,28 @@
+{
+  "reviews": [
+    {
+      "id": "1732867019275",
+      "name": "Kate",
+      "dishes_rating": 5,
+      "service_rating": 5,
+      "text": "Old Town exceeded all my expectations! The atmosphere is incredibly cozy, and each dish was a true masterpiece.",
+      "date": "2024-11-29"
+    },
+    {
+      "id": "1732867050074",
+      "name": "Victoria",
+      "dishes_rating": 5,
+      "service_rating": 4,
+      "text": "Great service and an elegant menu. The dishes were delicious, but what stood out the most was the warm, cozy atmosphere!",
+      "date": "2024-11-29"
+    },
+    {
+      "id": "1732867090136",
+      "name": "John",
+      "dishes_rating": 5,
+      "service_rating": 5,
+      "text": "Old Town is a true gem in the heart of the city! A wide selection of dishes, all absolutely delicious. The perfect place for family celebrations.",
+      "date": "2024-11-29"
+    }
+  ]
+}

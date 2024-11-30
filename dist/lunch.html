@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Town</title>
+    <link rel="icon" type="image/x-icon" href="/logo-icon.39699a53.svg">
+    <link rel="stylesheet" href="/index.b10d73a7.css">
+</head>
+<body>
+    <script src="/index.aa69868b.js"></script>
+    <div class="top-up hidden" id="feedbackForm">
+    <div class="background">
+        <button class="close-btn">×</button>
+    </div>
+    <div class="col-info" id="reviews-list"></div>
+    <script src="/index.f4055950.js" defer=""></script>
+    <div class="col-rating">
+        <h2>Please Rate Us!</h2>
+        <div class="ratings-container">
+            <div class="rating">
+                <label for="dishes">Dishes</label>
+                <div class="stars">
+                    <input type="radio" id="dish1" name="dishes" value="5"><label for="dish1">&#9733;</label>
+                    <input type="radio" id="dish2" name="dishes" value="4"><label for="dish2">&#9733;</label>
+                    <input type="radio" id="dish3" name="dishes" value="3"><label for="dish3">&#9733;</label>
+                    <input type="radio" id="dish4" name="dishes" value="2"><label for="dish4">&#9733;</label>
+                    <input type="radio" id="dish5" name="dishes" value="1"><label for="dish5">&#9733;</label>
+                </div>
+            </div>
+            <div class="rating">
+                <label for="service">Service</label>
+                <div class="stars">
+                    <input type="radio" id="service1" name="service" value="5"><label for="service1">&#9733;</label>
+                    <input type="radio" id="service2" name="service" value="4"><label for="service2">&#9733;</label>
+                    <input type="radio" id="service3" name="service" value="3"><label for="service3">&#9733;</label>
+                    <input type="radio" id="service4" name="service" value="2"><label for="service4">&#9733;</label>
+                    <input type="radio" id="service5" name="service" value="1"><label for="service5">&#9733;</label>
+                </div>
+            </div>            
+        </div>
+        <p>Click on the star</p>
+        <div class="comment-box">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Name">
+            <label for="comment">Comment</label>
+            <textarea id="comment" maxlength="500" rows="4" placeholder="Comment"></textarea>
+            <button id="submit-feedback" type="button">LEAVE A FEEDBACK</button>
+        </div>
+    </div>    
+    <script src="/index.f4055950.js" defer=""></script>
+</div>
+<div id="overlay" class="overlay" style="display: none"></div>
+<div id="feedback-message" class="feedback-message" style="display: none"></div>
+
+    <header>
+        <div class="contact-info">                
+            <p><a href="https://www.google.com/maps/search/12+Soborna+Street,+Lviv,+79000,+Ukraine/@49.8370836,23.9930468,14z?entry=ttu&g_ep=EgoyMDI0MTAwOC4wIKXMDSoASAFQAw%3D%3D"><svg width="24" height="34" viewbox="0 0 24 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 33.6666C11.6111 33.6666 11.2778 33.5555 11 33.3333C10.7222 33.1111 10.5139 32.8194 10.375 32.4583C9.84723 30.9028 9.18057 29.4444 8.37501 28.0833C7.59723 26.7222 6.50001 25.125 5.08334 23.2916C3.66668 21.4583 2.5139 19.7083 1.62501 18.0416C0.763899 16.375 0.333344 14.3611 0.333344 12C0.333344 8.74998 1.45834 5.99998 3.70834 3.74998C5.98612 1.4722 8.75001 0.333313 12 0.333313C15.25 0.333313 18 1.4722 20.25 3.74998C22.5278 5.99998 23.6667 8.74998 23.6667 12C23.6667 14.5278 23.1806 16.6389 22.2083 18.3333C21.2639 20 20.1667 21.6528 18.9167 23.2916C17.4167 25.2916 16.2778 26.9583 15.5 28.2916C14.75 29.5972 14.125 30.9861 13.625 32.4583C13.4861 32.8472 13.2639 33.1528 12.9583 33.375C12.6806 33.5694 12.3611 33.6666 12 33.6666ZM12 16.1666C13.1667 16.1666 14.1528 15.7639 14.9583 14.9583C15.7639 14.1528 16.1667 13.1666 16.1667 12C16.1667 10.8333 15.7639 9.8472 14.9583 9.04164C14.1528 8.23609 13.1667 7.83331 12 7.83331C10.8333 7.83331 9.84723 8.23609 9.04168 9.04164C8.23612 9.8472 7.83334 10.8333 7.83334 12C7.83334 13.1666 8.23612 14.1528 9.04168 14.9583C9.84723 15.7639 10.8333 16.1666 12 16.1666Z" fill="#1D1B20"></path>
+            </svg> 12 Soborna Street, Lviv, 79000, Ukraine</a>
+            <a href="tel:+380321234567"><svg width="35" height="35" viewbox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32.9167 25.085V29.71C32.9184 30.1394 32.8305 30.5644 32.6585 30.9578C32.4865 31.3511 32.2342 31.7043 31.9178 31.9945C31.6014 32.2848 31.2279 32.5058 30.8212 32.6433C30.4144 32.7809 29.9835 32.832 29.5558 32.7933C24.8119 32.2779 20.255 30.6568 16.2513 28.0604C12.5263 25.6934 9.36824 22.5354 7.00126 18.8104C4.39581 14.7885 2.77438 10.2095 2.26834 5.44417C2.22982 5.01785 2.28048 4.58818 2.41711 4.18251C2.55374 3.77684 2.77335 3.40407 3.06194 3.08792C3.35053 2.77178 3.70179 2.51918 4.09335 2.34623C4.48492 2.17327 4.9082 2.08374 5.33626 2.08334H9.96126C10.7094 2.07598 11.4348 2.34092 12.0021 2.82879C12.5693 3.31665 12.9399 3.99415 13.0446 4.73501C13.2398 6.21511 13.6018 7.66838 14.1238 9.06709C14.3312 9.61889 14.3761 10.2186 14.2531 10.7951C14.1302 11.3716 13.8445 11.9008 13.43 12.32L11.4721 14.2779C13.6667 18.1376 16.8625 21.3333 20.7221 23.5279L22.68 21.57C23.0992 21.1555 23.6284 20.8699 24.2049 20.7469C24.7814 20.6239 25.3811 20.6688 25.9329 20.8763C27.3316 21.3982 28.7849 21.7602 30.265 21.9554C31.0139 22.0611 31.6978 22.4383 32.1867 23.0153C32.6757 23.5923 32.9354 24.3289 32.9167 25.085Z" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg> +380 (32) 123-45-67</a>
+            <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.5 8.75V18.5L25 21.75M34.75 18.5C34.75 27.4746 27.4746 34.75 18.5 34.75C9.52537 34.75 2.25 27.4746 2.25 18.5C2.25 9.52537 9.52537 2.25 18.5 2.25C27.4746 2.25 34.75 9.52537 34.75 18.5Z" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg> 10:00 - 23:00</p>
+        </div>
+        <div class="bottom-row">
+            <a class="logo" href="/index.html">
+                <img src="/logo.3a7a154c.svg" alt="Old Town">
+            </a>
+            <nav class="tool-bar">
+                <ul class="navigation">
+                    <li><a href="/index.html" class="bold-txt">ABOUT</a></li>
+                    <li><a href="/menus.html" class="bold-txt">MENUS</a></li>
+                    <li><a href="/reservation.html" class="bold-txt">RESERVATION</a></li>
+                </ul>
+                <button class="pop-up bottom">FEEDBACK</button>
+            </nav>
+            <button class="mobile pop-up-bottom feedback-btn">
+    <img src="/feedback.fcb9b2a4.png" alt="Feedback Mobile">
+</button>
+<button class="mobile pop-up-bottom reservation-btn" onclick="window.location.href='reservation.html'">
+    <img src="/reservation.107568d4.png" alt="Reservation Mobile">
+</button>
+<div class="mobile tool-bar" id="mobileToolBar">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="mobile navigation-column" id="mobileNav">
+    <div class="row">
+        <img src="/logo-text.d5c77a0b.svg" alt="Logo Text">
+        <button class="close-btn" id="closeMobileNav">×</button>
+    </div>
+    <div class="pages">
+        <ul>
+            <li><a href="/index.html">ABOUT</a></li>
+            <li><a href="/menus.html">MENUS</a></li>
+            <li><a href="/reservation.html">RESERVATION</a></li>
+        </ul>
+    </div>
+    <div class="mobile-contact-info">                
+        <p class="item"><a href="https://www.google.com/maps/search/12+Soborna+Street,+Lviv,+79000,+Ukraine/@49.8370836,23.9930468,14z?entry=ttu&g_ep=EgoyMDI0MTAwOC4wIKXMDSoASAFQAw%3D%3D"><svg width="19" height="29" viewBox="0 0 24 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 33.6666C11.6111 33.6666 11.2778 33.5555 11 33.3333C10.7222 33.1111 10.5139 32.8194 10.375 32.4583C9.84723 30.9028 9.18057 29.4444 8.37501 28.0833C7.59723 26.7222 6.50001 25.125 5.08334 23.2916C3.66668 21.4583 2.5139 19.7083 1.62501 18.0416C0.763899 16.375 0.333344 14.3611 0.333344 12C0.333344 8.74998 1.45834 5.99998 3.70834 3.74998C5.98612 1.4722 8.75001 0.333313 12 0.333313C15.25 0.333313 18 1.4722 20.25 3.74998C22.5278 5.99998 23.6667 8.74998 23.6667 12C23.6667 14.5278 23.1806 16.6389 22.2083 18.3333C21.2639 20 20.1667 21.6528 18.9167 23.2916C17.4167 25.2916 16.2778 26.9583 15.5 28.2916C14.75 29.5972 14.125 30.9861 13.625 32.4583C13.4861 32.8472 13.2639 33.1528 12.9583 33.375C12.6806 33.5694 12.3611 33.6666 12 33.6666ZM12 16.1666C13.1667 16.1666 14.1528 15.7639 14.9583 14.9583C15.7639 14.1528 16.1667 13.1666 16.1667 12C16.1667 10.8333 15.7639 9.8472 14.9583 9.04164C14.1528 8.23609 13.1667 7.83331 12 7.83331C10.8333 7.83331 9.84723 8.23609 9.04168 9.04164C8.23612 9.8472 7.83334 10.8333 7.83334 12C7.83334 13.1666 8.23612 14.1528 9.04168 14.9583C9.84723 15.7639 10.8333 16.1666 12 16.1666Z" fill="#E2DED2"></path>
+        </svg> 12 Soborna Street, Lviv, 79000, Ukraine</a></p>
+        <p class="item"><a href="tel:+380321234567"><svg width="29" height="29" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32.9167 25.085V29.71C32.9184 30.1394 32.8305 30.5644 32.6585 30.9578C32.4865 31.3511 32.2342 31.7043 31.9178 31.9945C31.6014 32.2848 31.2279 32.5058 30.8212 32.6433C30.4144 32.7809 29.9835 32.832 29.5558 32.7933C24.8119 32.2779 20.255 30.6568 16.2513 28.0604C12.5263 25.6934 9.36824 22.5354 7.00126 18.8104C4.39581 14.7885 2.77438 10.2095 2.26834 5.44417C2.22982 5.01785 2.28048 4.58818 2.41711 4.18251C2.55374 3.77684 2.77335 3.40407 3.06194 3.08792C3.35053 2.77178 3.70179 2.51918 4.09335 2.34623C4.48492 2.17327 4.9082 2.08374 5.33626 2.08334H9.96126C10.7094 2.07598 11.4348 2.34092 12.0021 2.82879C12.5693 3.31665 12.9399 3.99415 13.0446 4.73501C13.2398 6.21511 13.6018 7.66838 14.1238 9.06709C14.3312 9.61889 14.3761 10.2186 14.2531 10.7951C14.1302 11.3716 13.8445 11.9008 13.43 12.32L11.4721 14.2779C13.6667 18.1376 16.8625 21.3333 20.7221 23.5279L22.68 21.57C23.0992 21.1555 23.6284 20.8699 24.2049 20.7469C24.7814 20.6239 25.3811 20.6688 25.9329 20.8763C27.3316 21.3982 28.7849 21.7602 30.265 21.9554C31.0139 22.0611 31.6978 22.4383 32.1867 23.0153C32.6757 23.5923 32.9354 24.3289 32.9167 25.085Z" stroke="#E2DED2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg> +380 (32) 123-45-67</a></p>
+        <p class="item"><svg width="29" height="29" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.5 8.75V18.5L25 21.75M34.75 18.5C34.75 27.4746 27.4746 34.75 18.5 34.75C9.52537 34.75 2.25 27.4746 2.25 18.5C2.25 9.52537 9.52537 2.25 18.5 2.25C27.4746 2.25 34.75 9.52537 34.75 18.5Z" stroke="#E2DED2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg> 10:00 - 23:00</p>
+    </div>
+    <div class="social-links">
+        <a href="https://www.instagram.com/" class="link" target="_blank">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M35 13H35.02M14 4H34C39.5228 4 44 8.47715 44 14V34C44 39.5228 39.5228 44 34 44H14C8.47715 44 4 39.5228 4 34V14C4 8.47715 8.47715 4 14 4ZM32 22.74C32.2468 24.4045 31.9625 26.1044 31.1875 27.598C30.4125 29.0916 29.1863 30.3028 27.6833 31.0593C26.1802 31.8159 24.4769 32.0792 22.8156 31.8119C21.1543 31.5445 19.6195 30.7602 18.4297 29.5703C17.2398 28.3805 16.4555 26.8457 16.1881 25.1844C15.9208 23.5231 16.1841 21.8198 16.9407 20.3167C17.6972 18.8137 18.9084 17.5875 20.402 16.8125C21.8956 16.0375 23.5955 15.7532 25.26 16C26.9578 16.2518 28.5297 17.0429 29.7434 18.2566C30.9571 19.4703 31.7482 21.0422 32 22.74Z" stroke="#E2DED2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>                        
+        </a>
+        <a href="https://www.facebook.com/" class="link" target="_blank">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M36 4H30C27.3478 4 24.8043 5.05357 22.9289 6.92893C21.0536 8.8043 20 11.3478 20 14V20H14V28H20V44H28V28H34L36 20H28V14C28 13.4696 28.2107 12.9609 28.5858 12.5858C28.9609 12.2107 29.4696 12 30 12H36V4Z" stroke="#E2DED2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>                        
+        </a>
+        <a href="mailto:old_town@gmail.com" class="link" target="_blank">
+            <svg width="44" height="36" viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M42 6C42 3.8 40.2 2 38 2H6C3.8 2 2 3.8 2 6M42 6V30C42 32.2 40.2 34 38 34H6C3.8 34 2 32.2 2 30V6M42 6L22 20L2 6" stroke="#E2DED2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>                        
+        </a>
+    </div>
+</div> 
+        </div>
+    </header>
+    <main>
+        <section class="menus button selection">
+            <h2>MENUS</h2>
+            <nav class="tool bar">
+                <ul class="navigation menu">
+                    <li><a href="/breakfast.html">BREAKFAST</a></li>
+                    <li><a href="/lunch.html">LUNCH</a></li>
+                    <li><a href="/dinner.html">DINNER</a></li>
+                    <li><a href="/dessert.html">DESSERT</a></li>
+                    <li><a href="/drinks.html">DRINKS</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="menu lunch">
+            <!-- <h2>LUNCH</h2> -->
+            <div class="col-6">
+                <div class="menu-section">
+                    <h1>S O U P S</h1>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <h3>CHICKEN BROTH WITH<br> NOODLES AND CIABATTA</h3>
+                            <p class="price">70 UAH</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <h3>GREEN BORSCHT</h3>
+                            <p class="price">95 UAH</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <h3>MUSHROOM CREAM SOUP</h3>
+                            <p class="price">110 UAH</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-section">
+                    <h1>S A L A D S</h1>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <h3>SALAD WITH EEL & AVOCADO</h3>
+                            <p class="price">200 UAH</p>
+                        </div>
+                        <p class="kumbh-sans-bold-txt">salad mix, smoked eel, avocado, cucumber,<br> bell pepper, white sesame, unagi sauce, lemon</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <h3>CAESAR SALAD WITH CHICKEN</h3>
+                            <p class="price">140 UAH</p>
+                        </div>
+                        <p class="kumbh-sans-bold-txt">baked chicken fillet, salad mix, parmesan,<br> cherries, crackers, quail eggs, Caesar sauce</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <h3>CAESAR SALAD WITH TIGER PRAWNS</h3>
+                            <p class="price">220 UAH</p>
+                        </div>
+                        <p class="kumbh-sans-bold-txt">tiger shrimp, salad mix, cherries,<br> lemon, parmesan, crackers, Caesar sauce</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-section">
+                    <h1>P A S T E</h1>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <h3>PASTA WITH SEAFOOD</h3>
+                            <p class="price">180 UAH</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <h3>PASTA WITH CHICKEN 
+                                AND MUSHROOMS</h3>
+                            <p class="price">150 UAH</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <h3>PASTA CARBONARA</h3>
+                            <p class="price">140 UAH</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-section">
+                    <h1>G R I L L</h1>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <h3>GRILLED VEGETABLES</h3>
+                            <p class="price">140 UAH</p>
+                        </div>
+                        <p class="kumbh-sans-bold-txt">tomato, bell pepper, mushrooms,<br> zucchini, blue onion</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <h3>GRILLED MACKEREL WITH<br> GRILLED VEGETABLES</h3>
+                            <p class="price">130 UAH</p>
+                        </div>  
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <h3>CHICKEN STEAK</h3>
+                            <p class="price">150 UAH</p>
+                        </div>
+                        <p class="kumbh-sans-bold-txt">chicken breast, Caesar sauce</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer row">
+            <div class="social links">
+                <a href="https://www.instagram.com/" class="link" target="_blank">
+                    <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M35 13H35.02M14 4H34C39.5228 4 44 8.47715 44 14V34C44 39.5228 39.5228 44 34 44H14C8.47715 44 4 39.5228 4 34V14C4 8.47715 8.47715 4 14 4ZM32 22.74C32.2468 24.4045 31.9625 26.1044 31.1875 27.598C30.4125 29.0916 29.1863 30.3028 27.6833 31.0593C26.1802 31.8159 24.4769 32.0792 22.8156 31.8119C21.1543 31.5445 19.6195 30.7602 18.4297 29.5703C17.2398 28.3805 16.4555 26.8457 16.1881 25.1844C15.9208 23.5231 16.1841 21.8198 16.9407 20.3167C17.6972 18.8137 18.9084 17.5875 20.402 16.8125C21.8956 16.0375 23.5955 15.7532 25.26 16C26.9578 16.2518 28.5297 17.0429 29.7434 18.2566C30.9571 19.4703 31.7482 21.0422 32 22.74Z" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>                        
+                </a>
+                <a href="https://www.facebook.com/" class="link" target="_blank">
+                    <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M36 4H30C27.3478 4 24.8043 5.05357 22.9289 6.92893C21.0536 8.8043 20 11.3478 20 14V20H14V28H20V44H28V28H34L36 20H28V14C28 13.4696 28.2107 12.9609 28.5858 12.5858C28.9609 12.2107 29.4696 12 30 12H36V4Z" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>                        
+                </a>
+                <a href="mailto:old_town@gmail.com" class="link" target="_blank">
+                    <svg width="44" height="36" viewbox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M42 6C42 3.8 40.2 2 38 2H6C3.8 2 2 3.8 2 6M42 6V30C42 32.2 40.2 34 38 34H6C3.8 34 2 32.2 2 30V6M42 6L22 20L2 6" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>                        
+                </a>
+            </div>
+            <div class="mobile contact-info">                
+                <p class="item"><a href="https://www.google.com/maps/search/12+Soborna+Street,+Lviv,+79000,+Ukraine/@49.8370836,23.9930468,14z?entry=ttu&g_ep=EgoyMDI0MTAwOC4wIKXMDSoASAFQAw%3D%3D"><svg width="19" height="29" viewbox="0 0 24 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 33.6666C11.6111 33.6666 11.2778 33.5555 11 33.3333C10.7222 33.1111 10.5139 32.8194 10.375 32.4583C9.84723 30.9028 9.18057 29.4444 8.37501 28.0833C7.59723 26.7222 6.50001 25.125 5.08334 23.2916C3.66668 21.4583 2.5139 19.7083 1.62501 18.0416C0.763899 16.375 0.333344 14.3611 0.333344 12C0.333344 8.74998 1.45834 5.99998 3.70834 3.74998C5.98612 1.4722 8.75001 0.333313 12 0.333313C15.25 0.333313 18 1.4722 20.25 3.74998C22.5278 5.99998 23.6667 8.74998 23.6667 12C23.6667 14.5278 23.1806 16.6389 22.2083 18.3333C21.2639 20 20.1667 21.6528 18.9167 23.2916C17.4167 25.2916 16.2778 26.9583 15.5 28.2916C14.75 29.5972 14.125 30.9861 13.625 32.4583C13.4861 32.8472 13.2639 33.1528 12.9583 33.375C12.6806 33.5694 12.3611 33.6666 12 33.6666ZM12 16.1666C13.1667 16.1666 14.1528 15.7639 14.9583 14.9583C15.7639 14.1528 16.1667 13.1666 16.1667 12C16.1667 10.8333 15.7639 9.8472 14.9583 9.04164C14.1528 8.23609 13.1667 7.83331 12 7.83331C10.8333 7.83331 9.84723 8.23609 9.04168 9.04164C8.23612 9.8472 7.83334 10.8333 7.83334 12C7.83334 13.1666 8.23612 14.1528 9.04168 14.9583C9.84723 15.7639 10.8333 16.1666 12 16.1666Z" fill="#2F2E2C"></path>
+                </svg> 12 Soborna Street, Lviv, 79000, Ukraine</a></p>
+                <p class="item"><a href="tel:+380321234567"><svg width="29" height="29" viewbox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32.9167 25.085V29.71C32.9184 30.1394 32.8305 30.5644 32.6585 30.9578C32.4865 31.3511 32.2342 31.7043 31.9178 31.9945C31.6014 32.2848 31.2279 32.5058 30.8212 32.6433C30.4144 32.7809 29.9835 32.832 29.5558 32.7933C24.8119 32.2779 20.255 30.6568 16.2513 28.0604C12.5263 25.6934 9.36824 22.5354 7.00126 18.8104C4.39581 14.7885 2.77438 10.2095 2.26834 5.44417C2.22982 5.01785 2.28048 4.58818 2.41711 4.18251C2.55374 3.77684 2.77335 3.40407 3.06194 3.08792C3.35053 2.77178 3.70179 2.51918 4.09335 2.34623C4.48492 2.17327 4.9082 2.08374 5.33626 2.08334H9.96126C10.7094 2.07598 11.4348 2.34092 12.0021 2.82879C12.5693 3.31665 12.9399 3.99415 13.0446 4.73501C13.2398 6.21511 13.6018 7.66838 14.1238 9.06709C14.3312 9.61889 14.3761 10.2186 14.2531 10.7951C14.1302 11.3716 13.8445 11.9008 13.43 12.32L11.4721 14.2779C13.6667 18.1376 16.8625 21.3333 20.7221 23.5279L22.68 21.57C23.0992 21.1555 23.6284 20.8699 24.2049 20.7469C24.7814 20.6239 25.3811 20.6688 25.9329 20.8763C27.3316 21.3982 28.7849 21.7602 30.265 21.9554C31.0139 22.0611 31.6978 22.4383 32.1867 23.0153C32.6757 23.5923 32.9354 24.3289 32.9167 25.085Z" stroke="#2F2E2C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg> +380 (32) 123-45-67</a></p>
+                <p class="item"><svg width="29" height="29" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.5 8.75V18.5L25 21.75M34.75 18.5C34.75 27.4746 27.4746 34.75 18.5 34.75C9.52537 34.75 2.25 27.4746 2.25 18.5C2.25 9.52537 9.52537 2.25 18.5 2.25C27.4746 2.25 34.75 9.52537 34.75 18.5Z" stroke="#2F2E2C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg> 10:00 - 23:00</p>
+            </div>
+            <a class="logo-center" href="/index.html">
+                <img src="/logo-text.d5c77a0b.svg" alt="Logo Text">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

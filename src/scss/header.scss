@@ -1,0 +1,169 @@
+header {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+
+    .contact-info {
+        background-color: $silver-pink;
+        text-align: center; 
+        justify-content: center;
+        font-size: 14px; 
+        padding: 9px 0px 10px 0px;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    
+        p {
+            color: $dark-charcoal-gray;
+            transition: color 0.3s ease;
+        }
+    
+        a {
+            color: inherit;
+            margin: 0 17px;
+            position: relative;
+            transition: color 0.5s ease;
+    
+            &:hover {
+                color: darken($black, 20%);
+            }
+    
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -2px; 
+                width: 100%;
+                height: 2px;
+                background-color: darken($black, 20%);
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.5s ease;
+            }
+    
+            &:hover::after {
+                transform: scaleX(1); 
+            }
+        }
+    
+        svg {
+            width: 1em; 
+            height: 1em;
+            color: $dark-charcoal-gray;
+            transition: color 0.5s ease;
+    
+            &:hover {
+                color: darken($black, 20%);
+            }
+        }
+    }    
+    
+    .bottom-row {
+        background-color: $warm-medium-brown;
+        display: flex;
+        justify-content: space-between; 
+        box-shadow: 0 20px 30px rgba($white-sand, 0.5);
+        width: 100%;
+        z-index: 10;
+
+        .logo {
+            padding: 15px 64px 12px;
+            display: flex;
+            justify-content: flex-start;
+            width: auto;
+            height: 60px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        nav.tool-bar {
+            padding: 0 60px;
+            display: flex;
+            justify-content: center;
+            
+            ul {
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    padding-top: 35px;
+                    margin-right: 42px; 
+                    font-size: 19px;
+                    
+                    a {
+                        color: $white-sand;
+                        border-bottom: 1px solid $white-sand;
+                        padding: 10px;
+                        transition: color 0.3s ease, box-shadow 0.3s ease;
+
+                        &:hover {
+                            color: $white; 
+                            box-shadow: 0 1px 0 $white;
+                        }
+                    }
+
+                    &:last-child{
+                        a {
+                            border: 3px solid $white-sand;
+                            border-radius: 3px;
+                            padding: 18px 48px;
+                            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+
+                            &:hover {
+                                background-color: $white-sand; 
+                                color: $warm-medium-brown; 
+                                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    
+    @media (max-width: 768px) {
+        .contact-info {
+            display: none;
+        }
+    
+        .bottom-row {
+            padding: 0 30px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            height: 80px; 
+    
+            nav.tool-bar {
+                display: none;
+            }
+    
+            .logo {
+                width: auto;
+                height: 40px; 
+                display: flex;
+                padding: 0;
+            }
+    
+            .mobile.tool-bar {
+                display: flex;
+                width: 45px;
+                height: 45px;
+                flex-direction: column;
+                
+                span {
+                    display: block;
+                    background-color: $white-sand;
+                    border-radius: 2px;
+                    width: 100%;
+                    margin: 7px 0;
+                    height: 5px;
+                }
+            }
+        }
+    }       
+}  
